@@ -1101,6 +1101,16 @@ class ServerConfig(
         privacySafe = true,
     )
 
+    val stackwiseTrackerUrl: MutableStateFlow<String> by StringSetting(
+        protoNumber = 96,
+        defaultValue = "",
+        group = SettingGroup.TRACKING,
+        privacySafe = true,
+        description =
+            "Base URL of the self-hosted Stackwise instance the Stackwise tracker syncs to " +
+                "(e.g. https://stackwise.example.com). Leave blank to disable the Stackwise tracker.",
+    )
+
     /** ****************************************************************** **/
     /**                                                                    **/
     /**                          Renamed settings                          **/
